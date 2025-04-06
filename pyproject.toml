@@ -6,6 +6,7 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "httpx[socks]>=0.28.1",
+    "inquirerpy>=0.3.4",
     "langchain-core>=0.3.51",
     "langchain-experimental>=0.3.4",
     "langchain-openai>=0.3.12",
