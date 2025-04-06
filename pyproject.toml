@@ -1,0 +1,25 @@
+[project]
+name = "deep-research"
+version = "0.1.0"
+description = "A Deep Research Replica built with LangChain and LangGraph."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "httpx[socks]>=0.28.1",
+    "langchain-core>=0.3.51",
+    "langchain-experimental>=0.3.4",
+    "langchain-openai>=0.3.12",
+    "langgraph>=0.3.25",
+    "langgraph-supervisor>=0.0.16",
+    "markdownify>=1.1.0",
+    "numpy>=2.2.4",
+    "pandas>=2.2.3",
+    "python-dotenv>=1.1.0",
+    "readabilipy>=0.3.0",
+    "yfinance>=0.2.55",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.29.5",
+]
