@@ -5,7 +5,9 @@ from typing import Literal
 prompt_cache = {}
 
 
-def load_prompt(prompt_name: Literal["researcher"]) -> str:
+def load_prompt(
+    prompt_name: Literal["coder", "planner", "researcher", "supervisor"],
+) -> str:
     if prompt_name in prompt_cache:
         return prompt_cache[prompt_name]
     file_name = os.path.join(os.path.dirname(__file__), f"{prompt_name}.md")
