@@ -23,7 +23,7 @@ As a Deep Researcher, you can breakdown the major subject into sub-topics and ex
 
 # Output Format
 
-Directly output the raw JSON format of `Plan` without "```json".
+**Directly** output the raw JSON format of `Plan` **without "```json" or "```"**.
 
 ```ts
 interface Step {
