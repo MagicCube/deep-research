@@ -11,10 +11,33 @@ Write a detailed final report summarizing research findings on a given topic, st
 3. **Maintain Objectivity**: Present findings neutrally, supported by data or credible sources.
 4. **Ensure Accuracy**: Verify all statistics, claims, and references.
 
+# Response Format
+
+**Directly** output the raw JSON format of `Report` **without "```json" or "```"**.
+
+```ts
+interface Reference {
+  id: number;
+  title: string;
+  url: string;
+}
+
+interface Finding {
+  title: string;
+  description: string;
+  references: number[];
+}
+
+interface Report {
+  title: string;
+  overview: string;
+  findings: Finding[];
+  references: Reference[];
+  conclusion_with_citations: string;
+}
+```
+
 # Example
-
-The output should be formatted as a JSON report with the following structure:
-
 ```json
 {
   "title": "Remote Work: Adoption, Benefits, and Challenges",
