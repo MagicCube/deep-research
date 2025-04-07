@@ -4,10 +4,10 @@ Write a detailed final report summarizing research findings on a given topic, st
 
 1. **Understand the Topic**: Ensure clarity on the subject matter and its scope.
 2. **Structure the Report**:
-   - **Overview**: Provide a concise summary of the topic, highlighting its importance and context.
-   - **Findings**: Break down the main insights into subcategories (e.g., benefits, challenges, trends).
-   - **Conclusion**: Summarize the implications of the findings and suggest actionable recommendations.
-   - **References**: List all sources cited in the report.
+   - **overview**: Provide a concise summary of the topic, highlighting its importance and context.
+   - **findings**: Break down the main insights into subcategories (e.g., benefits, challenges, trends). Sometimes, including images in the report is very helpful.
+   - **conclusion_with_citations**: A markdown formatted string. Summarize the implications of the findings and suggest actionable recommendations. Includes images if applicable.
+   - **references**: List all sources cited in the report.
 3. **Maintain Objectivity**: Present findings neutrally, supported by data or credible sources.
 4. **Ensure Accuracy**: Verify all statistics, claims, and references.
 
@@ -25,6 +25,7 @@ interface Reference {
 interface Finding {
   title: string;
   description: string;
+  image_urls?: string[];
   references: number[];
 }
 
@@ -46,16 +47,19 @@ interface Report {
     {
       "title": "Increased Productivity",
       "description": "Flexible schedules associated with remote work have the potential to boost employee productivity by **15%**",
+      "image_urls": ["https://example.com/image1.jpg", "https://example.com/image2.jpg"],
       "references": [1]
     },
     {
       "title": "Employee Satisfaction",
       "description": "Remote work allows employees to tailor their work environment, potentially improving job satisfaction and engagement",
+      "image_urls": ["https://example.com/image3.jpg"],
       "references": [2]
     },
     {
       "title": "Communication Barriers",
       "description": "Remote work can hinder effective communication among team members, leading to misunderstandings and delays",
+      "image_urls": ["https://example.com/image4.jpg"],
       "references": [1]
     },
     {
@@ -76,7 +80,7 @@ interface Report {
       "url": "..."
     }
   ],
-  "conclusion_with_citations": "**Remote work** presents a **significant opportunity** for organizations to enhance productivity and employee satisfaction [1](#ref_1).\n\nHowever, to maximize these benefits, businesses must proactively address the challenges associated with communication and work-life balance [1](#ref_1) [2](#ref_2).\n\nBy investing in collaboration tools, offering targeted training, and promoting supportive policies, organizations can create **a sustainable and productive remote work environment** [1](#ref_1) [2](#ref_2).",
+  "conclusion_with_citations": "![Employee Satisfaction](https://example.com/image3.jpg)\n\n**Remote work** presents a **significant opportunity** for organizations to enhance productivity and employee satisfaction [1](#ref_1).\n\n![Communication Barriers](https://example.com/image4.jpg)\n\nHowever, to maximize these benefits, businesses must proactively address the challenges associated with communication and work-life balance [1](#ref_1) [2](#ref_2).\n\nBy investing in collaboration tools, offering targeted training, and promoting supportive policies, organizations can create **a sustainable and productive remote work environment** [1](#ref_1) [2](#ref_2).",
 }
 ```
 
