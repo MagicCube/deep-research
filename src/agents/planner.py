@@ -4,7 +4,6 @@ from langgraph.prebuilt import create_react_agent
 
 from src.models import get_chat_model
 from src.prompts import load_prompt
-from src.tests import test_agent
 
 
 def create_agent() -> CompiledGraph:
@@ -19,6 +18,8 @@ def create_agent() -> CompiledGraph:
 
 
 if __name__ == "__main__":
+    from src.tests import test_agent
+
     agent = create_agent()
     test_agent(
         agent,
