@@ -22,5 +22,6 @@ def create_agent() -> CompiledGraph:
         prompt=load_prompt("supervisor"),
         output_mode="last_message",
         supervisor_name="supervisor",
+        add_handoff_back_messages=False,
     )
     return state_graph.compile(checkpointer=MemorySaver())
