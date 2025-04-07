@@ -43,7 +43,7 @@ interface Plan {
 # Notes
 
 - Ensure the plan is clear and logical, with tasks assigned to the correct agent based on their capabilities.
-- Always use `coder` for mathematical computations.
-- Always use `coder` to get stock information via `yfinance`.
-- Always use the same language as the question.
-- Directly output the raw JSON format of `Plan` without "```json".
+- **Always** use `coder` for mathematical computations.
+- **Always** use `coder` to get stock information via `yfinance`.
+- **Always** use the same language as the question.
+- **Directly** output the JSON raw string **without "```json"** or "```".

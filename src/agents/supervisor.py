@@ -7,6 +7,7 @@ from src.prompts import load_prompt
 
 from .coder import create_agent as create_coder_agent
 from .planner import create_agent as create_planner_agent
+from .reporter import create_agent as create_reporter_agent
 from .researcher import create_agent as create_researcher_agent
 
 
@@ -14,10 +15,11 @@ def create_agent() -> CompiledGraph:
     planner_agent = create_planner_agent()
     researcher_agent = create_researcher_agent()
     coder_agent = create_coder_agent()
+    reporter_agent = create_reporter_agent()
 
     model = get_chat_model()
     state_graph = create_supervisor(
-        agents=[planner_agent, researcher_agent, coder_agent],
+        agents=[planner_agent, researcher_agent, coder_agent, reporter_agent],
         model=model,
         prompt=load_prompt("supervisor"),
         output_mode="last_message",

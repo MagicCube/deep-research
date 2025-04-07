@@ -29,7 +29,7 @@ def ask(initial_question: str):
 def main():
     initial_question = inquirer.select(
         message="What do you want to know?",
-        choices=["[Ask my own]"] + BUILT_IN_QUESTIONS_ZH_CN,
+        choices=BUILT_IN_QUESTIONS_ZH_CN + ["[Ask my own]"],
     ).execute()
     if initial_question == "[Ask my own]":
         initial_question = inquirer.text(
