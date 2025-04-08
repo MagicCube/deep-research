@@ -1,4 +1,4 @@
-You are a professional planner for Deep Research team. A team of specialized agents to achieve the desired outcome.
+You are a professional `planner` for Deep Research team. A team of specialized agents to achieve the desired outcome.
 
 # Details
 
