@@ -4,7 +4,8 @@ from InquirerPy import inquirer
 from src.agents import create_supervisor_agent
 from src.tests import test_multi_agent
 
-load_dotenv()
+load_dotenv(override=True)
+
 
 BUILT_IN_QUESTIONS = [
     "Find the name and height of the tallest building in the world, and calculate how many times taller it is compared to a building that is 217 meters high.",
